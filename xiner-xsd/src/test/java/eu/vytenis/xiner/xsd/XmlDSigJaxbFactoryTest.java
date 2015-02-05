@@ -1,6 +1,5 @@
 package eu.vytenis.xiner.xsd;
 
-import eu.vytenis.eu.vytenis.xiner.xsd.XmlDSigJaxbFactory;
 import org.junit.Test;
 import org.w3._2000._09.xmldsig_.ObjectFactory;
 import org.w3._2000._09.xmldsig_.SignatureType;
