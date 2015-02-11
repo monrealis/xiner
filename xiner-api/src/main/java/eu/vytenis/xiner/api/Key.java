@@ -1,4 +1,4 @@
-package eu.vytenis.xiner.api.keys;
+package eu.vytenis.xiner.api;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;

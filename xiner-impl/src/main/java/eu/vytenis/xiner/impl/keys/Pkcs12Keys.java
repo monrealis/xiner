@@ -1,7 +1,7 @@
 package eu.vytenis.xiner.impl.keys;
 
 import eu.vytenis.xiner.api.Keys;
-import eu.vytenis.xiner.api.keys.Key;
+import eu.vytenis.xiner.api.Key;
 
 import java.security.KeyStore;
 
