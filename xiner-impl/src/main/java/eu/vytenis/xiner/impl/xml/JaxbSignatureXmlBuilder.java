@@ -1,7 +1,7 @@
 package eu.vytenis.xiner.impl.xml;
 
 import eu.vytenis.xiner.api.SignatureXmlBuilder;
-import eu.vytenis.xiner.xsd.XmlDSigJaxbFactory;
+import eu.vytenis.xiner.impl.jaxb.XmlDSigJaxbFactory;
 import org.w3._2000._09.xmldsig_.*;
 import org.w3c.dom.Document;
 

@@ -1,4 +1,4 @@
-package eu.vytenis.xiner.xsd;
+package eu.vytenis.xiner.impl.jaxb;
 
 import org.junit.Test;
 import org.w3._2000._09.xmldsig_.ObjectFactory;
@@ -52,6 +52,4 @@ public class XmlDSigJaxbFactoryTest {
     private Object deserializeSignature(String xml) throws JAXBException {
         return unmarshaller.unmarshal(new StreamSource(new StringReader(xml)));
     }
-
-
 }

@@ -1,4 +1,4 @@
-package eu.vytenis.xiner.xsd;
+package eu.vytenis.xiner.impl.jaxb;
 
 import org.w3._2000._09.xmldsig_.ObjectFactory;
 
