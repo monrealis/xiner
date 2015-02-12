@@ -7,13 +7,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-public class XmlDSigJaxbFactory {
-    protected static XmlDSigJaxbFactory instance = new XmlDSigJaxbFactory();
-
-    public static XmlDSigJaxbFactory get() {
-        return instance;
-    }
-
+public class XmlDSigJaxbFactoryImpl implements XmlDSigJaxbFactory {
+    @Override
     public Marshaller createMarshaller() {
         try {
             return createContext().createMarshaller();
@@ -22,6 +17,7 @@ public class XmlDSigJaxbFactory {
         }
     }
 
+    @Override
     public Unmarshaller createUnmarshaller() {
         try {
             return createContext().createUnmarshaller();
@@ -30,6 +26,7 @@ public class XmlDSigJaxbFactory {
         }
     }
 
+    @Override
     public JAXBContext createContext() {
         try {
             return JAXBContext.newInstance(ObjectFactory.class);

@@ -15,11 +15,12 @@ import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
-public class XmlDSigJaxbFactoryTest {
+public class XmlDSigJaxbFactoryImplTest {
     private ObjectFactory factory = new ObjectFactory();
-    private JAXBContext context = XmlDSigJaxbFactory.get().createContext();
-    private Marshaller marshaller = XmlDSigJaxbFactory.get().createMarshaller();
-    private Unmarshaller unmarshaller = XmlDSigJaxbFactory.get().createUnmarshaller();
+    private XmlDSigJaxbFactory jaxbFactory = new XmlDSigJaxbFactoryImpl();
+    private JAXBContext context = jaxbFactory.createContext();
+    private Marshaller marshaller = jaxbFactory.createMarshaller();
+    private Unmarshaller unmarshaller = jaxbFactory.createUnmarshaller();
 
     @Test
     public void shouldReturnsNotNullContext() {

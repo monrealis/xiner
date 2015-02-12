@@ -2,7 +2,9 @@ package eu.vytenis.xiner.impl.xml;
 
 import eu.vytenis.xiner.api.SignatureXmlBuilder;
 import eu.vytenis.xiner.impl.jaxb.XmlDSigJaxbFactory;
-import org.w3._2000._09.xmldsig_.*;
+import eu.vytenis.xiner.impl.jaxb.XmlDSigJaxbFactoryImpl;
+import org.w3._2000._09.xmldsig_.ObjectFactory;
+import org.w3._2000._09.xmldsig_.SignatureType;
 import org.w3c.dom.Document;
 
 import javax.xml.bind.JAXBException;
@@ -14,6 +16,7 @@ import java.io.StringWriter;
 
 public class JaxbSignatureXmlBuilder implements SignatureXmlBuilder {
     private ObjectFactory factory = new ObjectFactory();
+    private XmlDSigJaxbFactory jaxbFactory = new XmlDSigJaxbFactoryImpl();
 
     @Override
     public String createSignatureDocumentString() {
@@ -33,7 +36,7 @@ public class JaxbSignatureXmlBuilder implements SignatureXmlBuilder {
 
     private void marshall(SignatureType signature, Result result) {
         try {
-            XmlDSigJaxbFactory.get().createMarshaller().marshal(factory.createSignature(signature), result);
+            jaxbFactory.createMarshaller().marshal(factory.createSignature(signature), result);
         } catch (JAXBException e) {
             throw new RuntimeException(e);
         }
