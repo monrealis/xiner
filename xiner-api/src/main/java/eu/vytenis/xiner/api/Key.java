@@ -6,6 +6,8 @@ import java.security.cert.X509Certificate;
 
 public interface Key {
     PrivateKey getPrivate();
+
     PublicKey getPublic();
+
     X509Certificate getCertificate();
 }
